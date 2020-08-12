@@ -1,0 +1,16 @@
+.profilePic {
+	width: 95%;
+	margin-left: 20px;
+	max-width: 400px;
+	float: right;
+	border-radius: 2%;
+}
+
+.Social  {
+	color: #23a6d5;
+	 cursor: pointer;
+}
+
+.isActive {
+	border: 1px solid #23a6d5 !important;
+}

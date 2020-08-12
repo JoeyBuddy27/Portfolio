@@ -1,0 +1,100 @@
+[
+	{
+		"no": 0,
+		"title": "SlipSpark",
+		"type": "Logo",
+		"project": "Work",
+		"full": "Gaming logo designed for a mate. \n\n ",
+		"short": "Gaming logo designed for a mate. \n\n To be used as an Avatar on Twitch Youtube and other gaming platforms, and as an overlay on live streams",
+		"image": ["SlipSpark1.png"],
+		"tag": ["graphic"],
+		"alt": ["SlipSpark Logo Final"]
+	}, 
+	{
+		"no": 1,
+		"title": "Woodstock",
+		"type": "Logo",
+		"project": "Work",
+		"full": "ljksdhfkjdshfjkdhfkdh",
+		"short": "Logo designed for a friend's startup media company. Used for branding on social media, website, business cards, t-shirts.",
+		"image": ["Woodstock1.png", "Woodstock2.png", "Woodstock3.png"],
+		"alt": ["Woodstock Final Logo", "Woodstock Circle", "Woodstock Circle - no text"],
+		"tag": ["graphic"]
+	},
+	{
+		"no": 2,
+		"title": "Burger Builder",
+		"type": "Web",
+		"project": "Fun",
+		"short": "Burger Builder Application made with REACT JS. Includes authentication, databases, Redux and React hooks.",
+		"link": "http://burgerbuilder.redcastledesign.com/",
+		"image": ["Burger1.png", "Burger2.png", "Burger3.png"],
+		"alt": ["Burger Builder Home", "Burger Builder Authentication", "Burger Builder Orders"],
+		"tag": ["web"]
+	},
+	{
+		"no": 3,
+		"title": "Alternate Movie Posters",
+		"type": "Poster",
+		"project": "Fun",
+		"short": "Alternate movie posters made in Adobe Illustrator. They are minimalist in style.",
+		"image": ["MoviePoster1.png", "MoviePoster2.png", "MoviePoster3.jpg", "MoviePoster4.png", "MoviePoster5.jpg", "MoviePoster6.png"],
+		"alt": ["V For Vendetta Poster", "Scream Poster", "True Romance Poster", "Fight Club Poster", "Dazed and Confused Poster", "Alien Poster"],
+		"tag": ["graphic"]
+	},
+	{
+		"no": 4,
+		"title": "ODEON Graphics",
+		"type": "Poster",
+		"project": "Work",
+		"short": "Various graphics and posters made for marketing purposes while working at ODEON cinema Limerick. These were made in Photoshop. ",
+		"image": ["OdeonGraphics2.png", "OdeonGraphics1.png",  "OdeonGraphics3.jpg"],
+		"alt": ["Local marketing graphic", "Digital film times", "Local marketing poster Student Tuesday"],
+		"tag": ["graphic"]
+	},
+	{
+		"no": 5,
+		"title": "Joe's Movies",
+		"type": "Web",
+		"project": "Fun",
+		"link": "http://joesmovies.redcastledesign.com/index.html",
+		"short": "Demo film reviewing website to practice design/layout. Made from scratch with HTML5, Twitter Bootstrap and jQuery. Created custom banners and logos also for the site with Photoshop. ",
+		"image": ["JoesMovies1.png", "JoesMovies2.jpg"],
+		"alt": ["Joe's Movies Home Page", "Joe's Movies Custom Banner"],
+		"tag": ["graphic", "web"]
+	},
+	{
+		"no": 6,
+		"title": "Limerick Jazz Festival",
+		"type": "Web",
+		"project": "Work",
+		"link": "http://limerickjazzfestival.com",
+		"short": "Developed Wordpress site for Limerick Jazz Festival in 2012 and have managed updates and content every year since. Includes custom CSS and plugins..",
+		"image": ["LJF1.png", "LJF2.png"],
+		"alt": ["LJF Homepage", "LJF Homepage bottom"],
+		"tag": ["web"]
+	},
+	{
+		"no": 7,
+		"title": "Red Castle Design",
+		"type": "Web",
+		"project": "Work",
+		"link": "http://redcastledesign.com",
+		"short": "Single Page business website created with Wordpress. Created as a freelance company for design work in 2015. Includes custom CSS and plugins. ",
+		"image": ["RedCastle1.png", "RedCastle2.png"],
+		"alt": ["Red Castle Home Page", "Red Castle services section"],
+		"tag": ["web"]
+	},
+	{
+		"no": 8,
+		"title": "Lightroom edits",
+		"type": "Photo",
+		"project": "Fun",
+		"link": "https://www.flickr.com/photos/joedigitalmedia/",
+		"short": "Just a few select shots I've taken on holidays. Edited with Adobe Lightroom. See more on my Flickr page below.",
+		"image": ["Photo1.jpg", "Photo2.jpg", "Photo3.jpg", "Photo4.jpg", "Photo5.jpg"],
+		"alt": ["Budapest 1", "Budapest 2", "Cliffs of Moher 1", "Belfast", "Lagos"],
+		"tag": ["photo"]
+	}
+]
+	

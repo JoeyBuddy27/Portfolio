@@ -1,0 +1,23 @@
+.Toolbar {
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 100;
+    align-items: center;
+}
+
+.Logo {
+    height: 75px;
+}
+
+
+@media (max-width: 600px) {
+    .Logo {
+        height: 90px;
+        margin-left: -20px;
+    }
+}
+
