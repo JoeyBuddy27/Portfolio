@@ -1,23 +1,22 @@
 body {
-  	font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 a {
-	cursor: pointer;
-	color: #23a6d5;
-	text-decoration: none;
-	opacity: 0.8;
+  cursor: pointer;
+  color: #23a6d5;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 a:hover {
-	opacity: 1.0;
+  opacity: 1;
 }

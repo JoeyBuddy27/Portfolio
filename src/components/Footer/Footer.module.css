@@ -1,12 +1,18 @@
 .Footer {
-	background-color: white;
-    height: 50px;
+    background-color: white;
+    height: 100px;
     width: 50%;
     margin: 0px auto;
-    text-align: center;
+
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     align-items: center;
+}
+
+@media (max-width: 600px) {
+    .Footer {
+        width: 100%;
+    }
 }
