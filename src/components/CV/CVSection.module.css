@@ -5,7 +5,6 @@
 
 .Segment {
 	padding: 5%;
-	margin-left: 10px;
 	margin-bottom: 10px;
 	min-height: 200px;
 	box-sizing: border-box;
@@ -20,4 +19,9 @@
 .CVDesc {
 	white-space: pre-line;
 	vertical-align: bottom;
+	margin-top: 10px;
+}
+
+.skillBar {
+	margin-top: 10px;
 }

@@ -1,23 +1,20 @@
 .Toolbar {
-    height: 100px;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    z-index: 100;
-    align-items: center;
+  height: 100px;
+  z-index: 100;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(#23a6d5, 0.5);
+}
+
+.ToolbarInner {
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  /* box-sizing: border-box; */
+  margin: auto;
+  padding: 10px;
 }
 
 .Logo {
-    height: 75px;
+  height: 75px;
 }
-
-
-@media (max-width: 600px) {
-    .Logo {
-        height: 90px;
-        margin-left: -20px;
-    }
-}
-

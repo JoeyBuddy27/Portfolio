@@ -1,16 +1,27 @@
 .profilePic {
-	width: 95%;
+	width: 100%;
 	margin-left: 20px;
 	max-width: 400px;
-	float: right;
+	/* float: right; */
 	border-radius: 2%;
 }
 
-.Social  {
+@media only screen and (max-width: 650px) {
+	.profilePic {
+		margin-left: 0px;
+		max-width: 100% !important;
+	}
+}
+
+.Social {
 	color: #23a6d5;
-	 cursor: pointer;
+	cursor: pointer;
 }
 
 .isActive {
 	border: 1px solid #23a6d5 !important;
+}
+
+.paragraph {
+	margin-bottom: 20px;
 }

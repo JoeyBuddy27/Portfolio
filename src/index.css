@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
@@ -19,4 +24,8 @@ a {
 
 a:hover {
   opacity: 1;
+}
+
+img {
+  max-width: 500px !important;
 }
