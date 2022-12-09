@@ -18,9 +18,7 @@ const PortfolioItems = props => {
 	const [imgNum, setImgNum] = useState(0);
 	const [currNum, setCurrNum] = useState(0);
 
-	useEffect(() => {
-		console.log('called use effect');
-	}, [webActive, graphicActive, photoActive, allActive]);
+	useEffect(() => {}, [webActive, graphicActive, photoActive, allActive]);
 
 	const fadeHandler = () => {
 		setChecked(false);
@@ -48,8 +46,6 @@ const PortfolioItems = props => {
 		setCurrNum(0);
 		setImgNum(0);
 	};
-
-	console.log(myData);
 
 	let portfolioGrid = (
 		<Grow in={checked} timeout={500}>
@@ -103,10 +99,7 @@ const PortfolioItems = props => {
 
 	const fullPost = id => {
 		let currPortfolioNum;
-
 		currPortfolioNum = id;
-
-		console.log(currNum);
 
 		return (
 			<div>

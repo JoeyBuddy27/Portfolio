@@ -7,7 +7,6 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import Card from '@material-ui/core/Card';
 
 const fullPortfolio = props => {
-	console.log(props);
 	return (
 		<React.Fragment>
 			<Card className={classes.FullPortfolio}>

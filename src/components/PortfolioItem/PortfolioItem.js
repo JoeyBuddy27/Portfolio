@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './PortfolioItem.module.css';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -14,7 +14,6 @@ const PortfolioItem = props => {
 	let modalElement = null;
 	let weblink = null;
 	let github = null;
-	const [imgNum, setImgNum] = useState(0);
 
 	if (props.weblink) {
 		weblink = (
@@ -50,8 +49,8 @@ const PortfolioItem = props => {
 				<CardActionArea onClick={props.clicked}>
 					<CardMedia
 						className={classes.media}
-						image={props.image[imgNum]}
-						alt={props.alt[imgNum]}
+						image={props.image[0]}
+						alt={props.alt[0]}
 					/>
 					<CardContent>
 						<Typography gutterBottom variant='h5' component='h2'>
@@ -74,7 +73,13 @@ const PortfolioItem = props => {
 					<Avatar variant='rounded' className={classes[props.project]}>
 						{props.project}
 					</Avatar>
-					<div>
+					<div
+						style={{
+							marginTop: 'auto',
+							// display: 'flex',
+							// justifyContent: 'space-around',
+						}}
+					>
 						{weblink}
 						{github}
 						{modalElement}

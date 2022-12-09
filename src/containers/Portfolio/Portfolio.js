@@ -1,18 +1,10 @@
 import React from 'react';
 import PortfolioItems from '../../components/PortfolioItem/PortfolioItems';
 
-const Portfolio = (props) => {
+const Portfolio = () => {
+	let portfolioItems = <PortfolioItems />;
 
-
-	let portfolioItems = <PortfolioItems  />
-
-
-	return ( 
-		<React.Fragment>
-		{portfolioItems}
-    </React.Fragment>
-    );
+	return <React.Fragment>{portfolioItems}</React.Fragment>;
 };
-
 
 export default Portfolio;

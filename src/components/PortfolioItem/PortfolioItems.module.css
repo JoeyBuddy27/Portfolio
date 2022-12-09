@@ -2,7 +2,8 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	padding: 10px 0px;
+	padding-bottom: 32px;
+	padding-top: 16px;
 }
 
 @media (min-width: 600px) {
