@@ -1,0 +1,27 @@
+.cvSection {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.Segment {
+	padding: 5%;
+	margin-bottom: 10px;
+	min-height: 200px;
+	box-sizing: border-box;
+	height: 95%;
+	max-width: 100%;
+}
+
+.cvSection h3 {
+	color: #23a6d5;
+}
+
+.CVDesc {
+	white-space: pre-line;
+	vertical-align: bottom;
+	margin-top: 10px;
+}
+
+.skillBar {
+	margin-top: 10px;
+}
