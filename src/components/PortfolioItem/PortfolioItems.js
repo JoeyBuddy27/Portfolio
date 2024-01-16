@@ -31,11 +31,8 @@ const PortfolioItems = props => {
 		if (newData === 'all') {
 			setMyData(AllData);
 		} else {
-			setMyData(() =>
-				AllData.filter(
-					data => data.tag[0] === newData || data.tag[1] === newData,
-				),
-			);
+			console.log(AllData);
+			setMyData(() => AllData.filter(data => data.tag.includes(newData)));
 		}
 
 		setAllActive(all);
@@ -48,33 +45,35 @@ const PortfolioItems = props => {
 
 	let portfolioGrid = (
 		<Grow in={checked} timeout={500}>
-			<Grid container spacing={2}>
+			<Grid container spacing={3}>
 				{myData
-					.filter(item => !item.hide)
+					?.filter(item => !item.hide)
 					?.map((postData, index) => (
-						<PortfolioItem
-							key={postData?.no}
-							number={index}
-							title={postData.title}
-							short={postData.short}
-							full={postData.full}
-							image={postData.image}
-							tag={postData.tag.join(' ')}
-							type={postData.type}
-							weblink={postData.link}
-							github={postData.github}
-							project={postData.project}
-							alt={postData.alt}
-							clicked={() => {
-								setCurrNum(index);
-								setImgNum(0);
-								window.scrollTo({
-									top: 0,
-									left: 0,
-									behavior: 'smooth',
-								});
-							}}
-						/>
+						<>
+							<PortfolioItem
+								key={postData?.no}
+								number={index}
+								title={postData.title}
+								short={postData.short}
+								full={postData.full}
+								image={postData.image}
+								tag={postData.tag.join(' ')}
+								type={postData.type}
+								weblink={postData.link}
+								github={postData.github}
+								project={postData.project}
+								alt={postData.alt}
+								clicked={() => {
+									setCurrNum(index);
+									setImgNum(0);
+									window.scrollTo({
+										top: 0,
+										left: 0,
+										behavior: 'smooth',
+									});
+								}}
+							/>
+						</>
 					))}
 			</Grid>
 		</Grow>
@@ -98,67 +97,70 @@ const PortfolioItems = props => {
 		setImgNum(id);
 	};
 
+	// TODO: Replace this with a modal (TBC)
 	const fullPost = id => {
 		let currPortfolioNum;
 		currPortfolioNum = id;
 
-		return (
-			<div>
-				<FullPortfolio
-					id={myData[id].no}
-					currNum={currNum}
-					title={myData[currPortfolioNum].title}
-					short={myData[currPortfolioNum].short}
-					image={myData[currPortfolioNum].image[imgNum]}
-					imageLength={myData[currPortfolioNum].image.length}
-					type={myData[currPortfolioNum].type}
-					project={myData[currPortfolioNum].project}
-					full={myData[currPortfolioNum].full}
-					nextPost={() => nextPostHandler(currNum)}
-					prevPost={() => prevPostHandler(currNum)}
-					nextImg={() => changeImg(imgNum + 1)}
-					prevImg={() => changeImg(imgNum - 1)}
-					imgNum={imgNum}
-					alt={myData[currPortfolioNum].alt}
-					length={myData.length}
-					weblink={myData[currPortfolioNum].link}
-					github={myData[currPortfolioNum].github}
-				/>
-			</div>
-		);
+		// return (
+		// 	<div>
+		// 		<FullPortfolio
+		// 			id={myData[id]?.no}
+		// 			currNum={currNum}
+		// 			title={myData[currPortfolioNum].title}
+		// 			short={myData[currPortfolioNum].short}
+		// 			image={myData[currPortfolioNum].image[imgNum]}
+		// 			imageLength={myData[currPortfolioNum].image.length}
+		// 			type={myData[currPortfolioNum].type}
+		// 			project={myData[currPortfolioNum].project}
+		// 			full={myData[currPortfolioNum].full}
+		// 			nextPost={() => nextPostHandler(currNum)}
+		// 			prevPost={() => prevPostHandler(currNum)}
+		// 			nextImg={() => changeImg(imgNum + 1)}
+		// 			prevImg={() => changeImg(imgNum - 1)}
+		// 			imgNum={imgNum}
+		// 			alt={myData[currPortfolioNum].alt}
+		// 			length={myData.length}
+		// 			weblink={myData[currPortfolioNum].link}
+		// 			github={myData[currPortfolioNum].github}
+		// 		/>
+		// 	</div>
+		// );
 	};
 
 	return (
 		<React.Fragment>
-			<div className={classes.PortfolioCategories}>
-				<Button
-					className={classes[allActive]}
-					onClick={() => updateData('all', 'isActive')}
-				>
-					All
-				</Button>
-				<Button
-					className={classes[webActive]}
-					onClick={() => updateData('web', '', 'isActive')}
-				>
-					Web
-				</Button>
-				<Button
-					className={classes[visualActive]}
-					onClick={() => updateData('Visual', '', '', 'isActive')}
-				>
-					Visual
-				</Button>
-			</div>
-			<Grid container>
-				<Grid item sm={12} md={5} className={classes.Center}>
+			<div style={{ marginLeft: 8, marginRight: 8 }}>
+				<div className={classes.PortfolioCategories}>
+					<Button
+						className={classes[allActive]}
+						onClick={() => updateData('all', 'isActive')}
+					>
+						All
+					</Button>
+					<Button
+						className={classes[webActive]}
+						onClick={() => updateData('web', '', 'isActive')}
+					>
+						Web
+					</Button>
+					<Button
+						className={classes[visualActive]}
+						onClick={() => updateData('visual', '', '', 'isActive')}
+					>
+						Visual
+					</Button>
+				</div>
+				<Grid container className='mt-5'>
+					{/* <Grid item sm={12} md={5} className={classes.Center}>
 					{fullPost(currNum)}
-				</Grid>
+				</Grid> */}
 
-				<Grid item sm={12} md={7}>
+					{/* <Grid item sm={12}> */}
 					{portfolioGrid}
+					{/* </Grid> */}
 				</Grid>
-			</Grid>
+			</div>
 		</React.Fragment>
 	);
 };

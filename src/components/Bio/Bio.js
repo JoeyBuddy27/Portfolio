@@ -6,8 +6,8 @@ import EmailIcon from '@material-ui/icons/Email';
 
 const bio = props => (
 	<React.Fragment>
-		<Grid container>
-			<Grid item sm={6} lg={8} xl={8}>
+		<Grid container spacing={5} className='pr-3 pl-3'>
+			<Grid item sm={12} lg={9}>
 				<a
 					className={classes.Social}
 					href='https://www.linkedin.com/in/joedigitalmedia/'
@@ -113,7 +113,7 @@ const bio = props => (
 				</p>
 			</Grid>
 			{/* TODO: Edit the sizes here? */}
-			<Grid item sm={6} lg={4} xl={4}>
+			<Grid item sm={12} lg={3}>
 				<img
 					className={classes.profilePic}
 					src='https://i.postimg.cc/hPQhjqMd/me-Profo-1ebe65f9.jpg'

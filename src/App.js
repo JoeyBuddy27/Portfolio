@@ -21,7 +21,7 @@ const App = props => {
 
 	let routes = (
 		<Switch>
-			<Route path='/bio' exact title='Bio' component={asyncAbout} />
+			<Route path='/experience' exact title='Experience' component={asyncAbout} />
 			<Route path='/' title='Home' exact component={asyncPortfolio} />
 			<Redirect to='/' />
 		</Switch>

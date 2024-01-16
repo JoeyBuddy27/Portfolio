@@ -1,49 +1,34 @@
-import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
-import CV from "../../components/CV/CV";
-import Bio from "../../components/Bio/Bio";
-import classes from "./About.module.css";
+import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
+import CV from '../../components/CV/CV';
+import Bio from '../../components/Bio/Bio';
+import classes from './About.module.css';
 
-const About = (props) => {
-  const [bioActive, setBioActive] = useState("isActive");
-  const [cvActive, setCVActive] = useState("");
+const About = props => {
+	const [currentPage, setCurrentPage] = useState('cv');
 
-  const onBioClicked = (page) => {
-    setContent(page);
-    setBioActive("isActive");
-    setCVActive("");
-  };
+	let bio = <Bio />;
+	let cv = <CV />;
 
-  const onCVClicked = (page) => {
-    setContent(page);
-    setBioActive("");
-    setCVActive("isActive");
-  };
-
-  let bio = <Bio />;
-
-  let cv = <CV />;
-
-  const [content, setContent] = useState(bio);
-
-  return (
-    <React.Fragment>
-      <div className={classes.switchButton}>
-        <Button
-          className={classes[bioActive]}
-          onClick={() => onBioClicked(bio)}
-        >
-          {" "}
-          BIO{" "}
-        </Button>
-        <Button className={classes[cvActive]} onClick={() => onCVClicked(cv)}>
-          {" "}
-          CV{" "}
-        </Button>
-      </div>
-      {content}
-    </React.Fragment>
-  );
+	return (
+		<React.Fragment>
+			<div className={classes.switchButton}>
+				<Button
+					className={currentPage === 'cv' ? classes.isActive : null}
+					onClick={() => setCurrentPage('cv')}
+				>
+					CV
+				</Button>
+				<Button
+					className={currentPage === 'bio' ? classes.isActive : null}
+					onClick={() => setCurrentPage('bio')}
+				>
+					ABOUT
+				</Button>
+			</div>
+			{currentPage === 'bio' ? bio : cv}
+		</React.Fragment>
+	);
 };
 
 export default About;

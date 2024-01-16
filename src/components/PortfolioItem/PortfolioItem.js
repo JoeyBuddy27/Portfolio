@@ -66,21 +66,41 @@ const PortfolioItem = props => {
 						</Typography>
 					</CardContent>
 				</CardActionArea>
-				<CardActions>
-					<Avatar variant='rounded' className={classes.Type}>
-						{props.type}
-					</Avatar>
-					<Avatar variant='rounded' className={classes[props.project]}>
-						{props.project}
-					</Avatar>
+				<CardActions style={{ marginTop: 'auto' }}>
 					<div
 						style={{
-							marginTop: 'auto',
+							display: 'flex',
+							flexDirection: 'row',
+							justifyContent: 'space-between',
+							width: '100%',
 						}}
 					>
-						{weblink}
-						{github}
-						{modalElement}
+						<div
+							style={{
+								display: 'flex',
+								justifyContent: 'space-between',
+							}}
+						>
+							<Avatar
+								variant='rounded'
+								className={classes.Type}
+								style={{ marginRight: 8 }}
+							>
+								{props.type}
+							</Avatar>
+							<Avatar variant='rounded' className={classes[props.project]}>
+								{props.project}
+							</Avatar>
+						</div>
+						<div
+							style={{
+								marginTop: 'auto',
+							}}
+						>
+							{weblink}
+							{github}
+							{modalElement}
+						</div>
 					</div>
 				</CardActions>
 			</Card>

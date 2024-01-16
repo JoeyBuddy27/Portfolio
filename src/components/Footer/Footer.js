@@ -6,8 +6,8 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const footer = props => (
 	<div className={classes.Footer}>
-		&copy; Copyright Joe O'Brien 2020
-		<p>
+		<p style={{ width: '33%' }}>&copy; Copyright Joe O'Brien 2020 </p>
+		<p style={{ width: '33%' }}>
 			{' '}
 			Website build with{' '}
 			<a href='https://reactjs.org/' target='blank'>
@@ -15,30 +15,31 @@ const footer = props => (
 				REACT JS{' '}
 			</a>{' '}
 		</p>
-		<a
-			className={classes.Social}
-			href='https://www.linkedin.com/in/joedigitalmedia/'
-			rel='noopener noreferrer'
-			target='blank'
-		>
-			<LinkedInIcon fontSize='large' />
-		</a>
-		<a
-			className={classes.Social}
-			href='https://github.com/JoeyBuddy27/'
-			rel='noopener noreferrer'
-			target='blank'
-		>
-			<GitHubIcon fontSize='large' />
-		</a>
-		<a
-			className={classes.Social}
-			rel='noopener noreferrer'
-			href='mailto:joedigitalmedia@gmail.com'
-			target='blank'
-		>
-			<EmailIcon fontSize='large' />
-		</a>
+		<div>
+			<a
+				className='mr-1'
+				href='https://www.linkedin.com/in/joedigitalmedia/'
+				rel='noopener noreferrer'
+				target='blank'
+			>
+				<LinkedInIcon fontSize='medium' />
+			</a>
+			<a
+				className='mr-1'
+				href='https://github.com/JoeyBuddy27/'
+				rel='noopener noreferrer'
+				target='blank'
+			>
+				<GitHubIcon fontSize='medium' />
+			</a>
+			<a
+				rel='noopener noreferrer'
+				href='mailto:joedigitalmedia@gmail.com'
+				target='blank'
+			>
+				<EmailIcon fontSize='medium' />
+			</a>
+		</div>
 	</div>
 );
 

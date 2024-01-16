@@ -8,27 +8,32 @@ import BuildIcon from '@material-ui/icons/Build';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Button from '@material-ui/core/Button';
 import classes from './CV.module.css';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
 const CV = props => {
 	const cvArray = [
 		{
 			skill: '',
 			role: 'joegitalmedia@gmail.com',
-			location: 'Watford, UK',
+			location: 'Bristol, UK',
 			icon: 'contact',
 			date: 'UK: 07828716124',
 			date2: 'IRE: 00353867211919',
 		},
 		{
 			skill: [
-				'HTML5',
+				'HTML 5',
 				100,
-				'CSS/SASS',
+				'React & Typescript',
+				90,
+				'Vue JS',
 				80,
-				'JavaScript/React/Typescript',
+				'React Native',
+				80,
+				'CSS/SASS',
 				70,
-				'Adobe Photoshop',
-				70,
+				'Node JS',
+				60,
 			],
 			icon: 'skills',
 		},
@@ -39,7 +44,7 @@ const CV = props => {
 			icon: 'professional',
 			header: 'PROFESSIONAL EXPERIENCE',
 			date: 'Aug 2021 - Present',
-			desc: 'Developing customer portal app using Typescript and React JS. Maintaining main company website with VUE JS.',
+			desc: 'Developing customer portal app using Typescript and React JS. Maintaining main company website with VUE JS. Developing mobile app with React Native & Node JS',
 		},
 		{
 			skill: '',
@@ -108,20 +113,25 @@ const CV = props => {
 	};
 
 	const skillLevelChange = skillValue => {
-		return <LinearProgress variant='determinate' value={skillValue} />;
+		return (
+			// TODO: Change color (MUI theme level??)
+			<LinearProgress variant='determinate' value={skillValue} />
+		);
 	};
 
 	return (
 		<React.Fragment>
 			<center>
+				{/* TODO: MAke this an icon instead */}
 				<Button
 					variant='outlined'
 					className={classes.cvButton}
 					size='small'
+					startIcon={<PictureAsPdfIcon />}
 					href='https://docs.google.com/document/d/1skaowjZZQQ2svchpLudzD5CqP5oeHo6c3t13Rb0zJxo/edit'
 					target='blank'
 				>
-					TEXT VERSION
+					Download
 				</Button>
 			</center>
 			<br />
